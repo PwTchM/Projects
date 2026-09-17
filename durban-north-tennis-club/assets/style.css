@@ -1,0 +1,177 @@
+/* ===== Durban North Tennis Club ===== */
+:root{
+  --sage:#7cb69d;
+  --sage-dark:#5f9d82;
+  --teal:#133133;
+  --teal-2:#0c2223;
+  --tan:#ac8d6f;
+  --tan-light:#c7ab8f;
+  --cream:#f5f3ee;
+  --white:#ffffff;
+  --ink:#22312e;
+  --radius:16px;
+  --shadow:0 18px 40px -18px rgba(19,49,51,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin-inline:auto}
+h1,h2,h3,h4{line-height:1.15;color:var(--teal);font-weight:700}
+h2{font-size:clamp(1.8rem,3.4vw,2.7rem)}
+
+/* ===== Buttons ===== */
+.btn{display:inline-block;padding:.9rem 1.7rem;border-radius:50px;font-weight:600;
+  transition:.25s;border:2px solid transparent;cursor:pointer}
+.btn-sm{padding:.55rem 1.1rem;font-size:.9rem}
+.btn-accent{background:var(--tan);color:var(--teal)}
+.btn-accent:hover{background:var(--tan-light);transform:translateY(-2px)}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;border-color:var(--teal);color:var(--teal)}
+.btn-ghost.light{border-color:#fff;color:#fff}
+.btn-ghost:hover{background:var(--teal);color:#fff}
+.btn-ghost.light:hover{background:#fff;color:var(--teal)}
+
+/* ===== Nav ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);box-shadow:0 2px 16px rgba(19,49,51,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:800;color:var(--teal);
+  font-size:1.05rem;line-height:1.05}
+.brand img{width:46px;height:46px;border-radius:50%}
+.brand small{font-weight:500;color:var(--tan);font-size:.8rem}
+.nav-links{list-style:none;display:flex;align-items:center;gap:1.6rem}
+.nav-links a{font-weight:500;font-size:.98rem;color:var(--ink);transition:.2s}
+.nav-links a:hover{color:var(--sage-dark)}
+.nav-links a.btn{color:var(--teal)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+.nav-toggle span{width:26px;height:3px;background:var(--teal);border-radius:3px;transition:.3s}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;
+  background:url('img/courts-aerial.jpg') center/cover no-repeat;color:#fff}
+.hero-overlay{position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(12,34,35,.9) 10%,rgba(19,49,51,.7) 45%,rgba(19,49,51,.25) 100%)}
+.hero-inner{position:relative;max-width:660px;padding:5rem 0}
+.eyebrow{display:inline-block;letter-spacing:.16em;text-transform:uppercase;
+  font-size:.8rem;font-weight:600;color:var(--tan-light);margin-bottom:1rem}
+.hero h1{color:#fff;font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;letter-spacing:-1px}
+.hero h1 span{color:var(--tan)}
+.hero p{margin:1.3rem 0 2rem;font-size:1.15rem;color:#eef3f0;max-width:36rem}
+.hero p strong{color:#fff}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:flex;gap:2.4rem;margin-top:3rem;flex-wrap:wrap}
+.hero-stats strong{display:block;font-size:2rem;color:var(--tan);font-family:'Bebas Neue',sans-serif;letter-spacing:1px}
+.hero-stats span{font-size:.85rem;color:#dfe8e4}
+
+/* ===== Sections ===== */
+.section{padding:5.5rem 0}
+.section-alt{background:var(--cream)}
+.tag{display:inline-block;background:rgba(124,182,157,.22);color:var(--sage-dark);
+  padding:.35rem .9rem;border-radius:50px;font-size:.8rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
+.tag.light{background:rgba(255,255,255,.18);color:#fff}
+.section-head{text-align:center;max-width:640px;margin:0 auto 3rem}
+.section-head p{color:#5b6b66;margin-top:.6rem}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.about-media img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;
+  height:100%;max-height:480px;object-fit:cover}
+.about-copy p{color:#4d5b57;margin-top:1rem}
+.ticks{list-style:none;margin-top:1.6rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.ticks li{position:relative;padding-left:1.7rem;font-weight:500;color:var(--teal)}
+.ticks li::before{content:"✓";position:absolute;left:0;color:#fff;background:var(--sage-dark);
+  width:1.2rem;height:1.2rem;border-radius:50%;font-size:.75rem;display:grid;place-items:center;top:.25rem}
+
+/* ===== Cards ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem}
+.card{background:#fff;padding:2.2rem 1.8rem;border-radius:var(--radius);
+  box-shadow:0 12px 30px -20px rgba(19,49,51,.35);border:1px solid rgba(124,182,157,.25);
+  transition:.28s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card-ico{font-size:2.2rem;margin-bottom:.8rem}
+.card h3{margin-bottom:.5rem}
+.card p{color:#566762;font-size:.97rem}
+
+/* ===== Coaching ===== */
+.coach-list{display:flex;flex-direction:column;gap:1rem;margin:1.6rem 0 1.8rem}
+.coach{display:flex;align-items:center;gap:1rem;background:var(--cream);
+  padding:1rem 1.2rem;border-radius:14px}
+.coach-avatar{width:52px;height:52px;border-radius:50%;background:var(--teal);color:var(--tan);
+  display:grid;place-items:center;font-weight:700;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px}
+.coach h4{color:var(--teal)}
+.coach p{font-size:.9rem;color:#5b6b66}
+.coach a{color:var(--sage-dark);font-weight:600}
+
+/* ===== Membership ===== */
+.membership{background:linear-gradient(120deg,var(--teal) 0%,var(--teal-2) 100%);color:#fff;
+  position:relative;overflow:hidden}
+.membership::after{content:"🎾";position:absolute;right:-1rem;bottom:-2rem;font-size:12rem;opacity:.07}
+.membership h2{color:#fff}
+.membership-copy{max-width:620px}
+.membership-copy p{color:#d8e4df;margin-top:1rem}
+.pay-note{margin-top:1.6rem;font-size:.95rem}
+.pay-note a{color:var(--tan-light);font-weight:600}
+
+/* ===== Gallery ===== */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:1rem}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px;transition:.35s}
+.gallery img:hover{transform:scale(1.02);filter:brightness(1.05)}
+.gallery .g-wide{grid-column:span 2}
+
+/* ===== Review strip ===== */
+.review{background:var(--sage)}
+.review-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  flex-wrap:wrap;padding:2.4rem 0}
+.review h3{color:var(--teal)}
+.review p{color:var(--teal-2)}
+
+/* ===== Footer ===== */
+footer{background:var(--teal-2);color:#cfdad6}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding:4rem 0 2.5rem}
+.footer-brand img{width:64px;height:64px;border-radius:50%;margin-bottom:1rem}
+.footer-brand p{font-size:.92rem;color:#a9b8b4;max-width:22rem}
+.footer-col h4{color:#fff;margin-bottom:1rem;font-size:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-col a{color:#bcc9c5;font-size:.92rem;transition:.2s}
+.footer-col a:hover{color:var(--tan-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.4rem 0;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.footer-bottom p{font-size:.82rem;color:#8fa19c;width:min(1180px,92%);margin-inline:auto}
+.footer-bottom{flex-direction:column;text-align:center}
+
+/* ===== Floating book button ===== */
+.fab{position:fixed;right:1.2rem;bottom:1.2rem;z-index:60;background:var(--tan);
+  color:var(--teal);font-weight:700;padding:.9rem 1.4rem;border-radius:50px;
+  box-shadow:0 10px 24px -6px rgba(0,0,0,.45);transition:.25s}
+.fab:hover{background:var(--tan-light);transform:translateY(-3px)}
+
+/* ===== Responsive ===== */
+@media(max-width:860px){
+  .nav-toggle{display:flex}
+  .nav-links{position:fixed;inset:64px 0 auto 0;background:#fff;flex-direction:column;
+    align-items:flex-start;gap:0;padding:1rem 6%;box-shadow:var(--shadow);
+    transform:translateY(-140%);transition:.35s;opacity:0}
+  .nav-open .nav-links{transform:translateY(0);opacity:1}
+  .nav-links li{width:100%;border-bottom:1px solid #eef1ef}
+  .nav-links li:last-child{border:0;padding-top:.8rem}
+  .nav-links a{display:block;padding:.9rem 0;width:100%}
+  .nav-open .nav-toggle span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .nav-open .nav-toggle span:nth-child(2){opacity:0}
+  .nav-open .nav-toggle span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  .grid-2{grid-template-columns:1fr;gap:2.2rem}
+  .about-media{order:-1}
+  #coaching .about-media{order:0}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .gallery .g-wide{grid-column:span 2}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:520px){
+  .ticks{grid-template-columns:1fr}
+  .hero-stats{gap:1.6rem}
+  .footer-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .gallery .g-wide{grid-column:span 1}
+}
